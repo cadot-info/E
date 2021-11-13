@@ -9,4 +9,4 @@ Return a immediatly message
 
 -E(message)
 
-message is string, array....
+message is string, array.... and return json_encode for non string

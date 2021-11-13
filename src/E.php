@@ -19,11 +19,13 @@ namespace CadotInfo;
 /**
  * E funtion for send message immediatly
  *
- * @param  string $texte
+ * @param  mixed $texte
  * @return void
  */
-function E(string $texte): void
+function E($texte): void
 {
+    if (!is_string($texte))
+        $texte = json_encode($texte);
     echo "- " . ucfirst($texte) . "\n";
     ob_flush();
 }
